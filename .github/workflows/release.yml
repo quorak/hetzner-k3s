@@ -32,7 +32,7 @@ jobs:
           gh release create ${{ env.VERSION }} -n "${{ env.MESSAGE }}" -t "${{ env.NAME }}" || true
           gh release upload ${{ env.VERSION }} ${{ env.FILES }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           VERSION: ${{ github.ref_name }}
           MESSAGE: "WIP"
           NAME: ${{ github.ref_name }}
@@ -49,7 +49,7 @@ jobs:
           gh release create ${{ env.VERSION }} -n "${{ env.MESSAGE }}" -t "${{ env.NAME }}" || true
           gh release upload ${{ env.VERSION }} ${{ env.FILES }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           VERSION: ${{ github.ref_name }}
           MESSAGE: "WIP"
           NAME: ${{ github.ref_name }}
@@ -79,7 +79,7 @@ jobs:
           gh release create ${{ env.VERSION }} -n "${{ env.MESSAGE }}" -t "${{ env.NAME }}" || true
           gh release upload ${{ env.VERSION }} ${{ env.FILES }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           VERSION: ${{ github.ref_name }}
           MESSAGE: "WIP"
           NAME: ${{ github.ref_name }}
